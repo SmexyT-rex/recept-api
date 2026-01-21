@@ -4,6 +4,10 @@ export const createRecipe = async (req, res) => {
   try {
     const { name, description, instructions, ingredients } = req.body;
 
+    if (!Array.isArray(ingredients)) {
+      return res.status(400).json({ error: "Ingredients must be an array" });
+    }
+
     const [result] = await db.execute(
       "INSERT INTO recipes (name, description, instructions) VALUES (?, ?, ?)",
       [name, description, instructions],
