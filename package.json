@@ -12,11 +12,14 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "autoprefixer": "^10.4.23",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mysql": "^2.18.1",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
   },
   "dependencies": {
     "mysql2": "^3.16.1"
