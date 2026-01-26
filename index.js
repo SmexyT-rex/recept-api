@@ -7,11 +7,17 @@ const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
 app.use("/recipes", router);
 
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.json({ message: "Hello World!" });
 });
 
 app.listen(PORT, () => {
