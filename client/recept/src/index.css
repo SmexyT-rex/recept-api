@@ -1,7 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+:root {
+  --color-base-100: #d8d8d8; /* Example value */
+  --color-base-200: #d9d9d9; /* Example value */
+  --color-base-300: #414141; /* Example value */
+  --spacing: 4px;
+
+}
+
 @theme {
+  --color-base-100: rgb(216, 216, 216);
+  --color-base-200: rgb(216, 216, 216);
+  --color-base-300: rgb(216, 216, 216);
   --breakpoint-xs: 320px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
@@ -16,5 +27,4 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #d8d8d8 !important;
 }

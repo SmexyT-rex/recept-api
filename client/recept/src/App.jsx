@@ -14,17 +14,4 @@ const App = () => {
   );
 };
 
-try {
-  const response = await fetch("http://localhost:3000/recipes");
-
-  if (!response.ok) {
-    throw new Error(`HTTP error ${response.status}`);
-  }
-
-  const data = await response.json();
-  console.log(data);
-} catch (err) {
-  console.error(err.message);
-}
-
 export default App;
