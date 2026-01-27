@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import router from "./routes/routes.js";
+import ingredientRouter from "./routes/ingredientRoutes.js";
+import joinRoute from "./routes/joinRoute.js";
 
 const app = express();
 dotenv.config();
@@ -15,6 +17,8 @@ app.use(
   }),
 );
 app.use("/recipes", router);
+app.use("/ingredients", ingredientRouter);
+app.use("/all", joinRoute);
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });
