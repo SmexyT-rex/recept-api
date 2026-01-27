@@ -15,7 +15,7 @@ const MainSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center mt-10 mb-30 px-5">
+      <div className="flex grow flex-col items-center">
         <div id="main-section" className={`justify-center`}>
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {recipes.map((recipe) => (

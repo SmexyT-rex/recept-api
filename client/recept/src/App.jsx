@@ -5,12 +5,12 @@ import Pagination from "./Pagination";
 
 const App = () => {
   return (
-    <>
+    <div className="flex flex-col items-stretch min-h-screen">
       <Header />
       <MainSection />
       <Pagination />
       <Footer />
-    </>
+    </div>
   );
 };
 
