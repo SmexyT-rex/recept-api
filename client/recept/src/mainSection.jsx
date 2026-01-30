@@ -23,9 +23,8 @@ const MainSection = () => {
                 key={recipe.id}
                 recipeTitle={recipe.name}
                 recipeDescription={recipe.description}
-                ingredients={recipe.ingredients
-                  .map((ing) => ing.name)
-                  .join(", ")}
+                recipeInstructions={recipe.instructions}
+                ingredients={recipe.ingredients}
               />
             ))}
           </div>

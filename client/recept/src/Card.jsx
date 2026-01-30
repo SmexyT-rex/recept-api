@@ -1,7 +1,8 @@
 const Card = ({
   recipeTitle = "test",
   recipeDescription = "Description",
-  ingredients = ["test", "test"],
+  ingredients = [{ name: "test", quantity: "1" }],
+  recipeInstructions = "Instructions",
 }) => {
   return (
     <div className="card bg-orange-100 text-gray-950 w-96 xs:w-86 shadow-sm p-5">
@@ -15,7 +16,7 @@ const Card = ({
       <div className="card-body">
         <h2 className="card-title">{recipeTitle}</h2>
         <p>{recipeDescription}</p>
-        <p>{ingredients}</p>
+        <p>{ingredients.map((ing) => ing.name).join(", ")}</p>
 
         <div className="card-actions flex justify-around">
           <button
@@ -41,42 +42,26 @@ const Card = ({
                     className=" flex-1 xl:max-w-5xl rounded-xl"
                   />
                 </div>
-                <p className="text-base/7 p-4 lg:pl-25 lg:pr-25">
-                  Lorem ipsum sdfgsdfg sdfgsdfgs dfgsdfgsd fgsdfgsd fgsdfgsdf
-                  gsdfgsdf gsdfgsdf gsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdf
-                  gsdfgsdfgsdfgsdfg sdfgsdfgsd fgsdfg Lorem ipsum sdfgsdfg
-                  sdfgsdfgs dfgsdfgsd fgsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf
-                </p>
                 <table className="table table-zebra">
                   {/* head */}
                   <thead className="text-stone-600">
                     <tr>
-                      <th>Name</th>
-                      <th>Job</th>
-                      <th>Favorite Color</th>
+                      <th>Ingredient</th>
+                      <th>Quantity</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {/* row 1 */}
-                    <tr>
-                      <td>Cy Ganderton</td>
-                      <td>Quality Control Specialist</td>
-                      <td>Blue</td>
-                    </tr>
-                    {/* row 2 */}
-                    <tr>
-                      <td>Hart Hagerty</td>
-                      <td>Desktop Support Technician</td>
-                      <td>Purple</td>
-                    </tr>
-                    {/* row 3 */}
-                    <tr>
-                      <td>Brice Swyre</td>
-                      <td>Tax Accountant</td>
-                      <td>Red</td>
-                    </tr>
+                    {ingredients.map((ing) => (
+                      <tr key={ing.id}>
+                        <td>{ing.name}</td>
+                        <td>{ing.quantity}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
+                <p className="text-base/7 p-4 lg:pl-25 lg:pr-25">
+                  {recipeInstructions}
+                </p>
               </div>
             </div>
           </dialog>
