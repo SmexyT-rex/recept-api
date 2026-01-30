@@ -32,28 +32,20 @@ const Card = ({
                   ✕
                 </button>
               </form>
-              <h3 className="font-bold text-lg">{recipeTitle}</h3>
+              <h3 className="font-bold text-lg pb-5">{recipeTitle}</h3>
               <div className="overflow-x-auto rounded-box border border-base-content/5 bg-white">
+                <div className="xl:p-4 flex justify-center">
+                  <img
+                    src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                    alt="Shoes"
+                    className=" flex-1 xl:max-w-5xl rounded-xl"
+                  />
+                </div>
                 <p className="text-base/7 p-4 lg:pl-25 lg:pr-25">
                   Lorem ipsum sdfgsdfg sdfgsdfgs dfgsdfgsd fgsdfgsd fgsdfgsdf
                   gsdfgsdf gsdfgsdf gsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdf
                   gsdfgsdfgsdfgsdfg sdfgsdfgsd fgsdfg Lorem ipsum sdfgsdfg
                   sdfgsdfgs dfgsdfgsd fgsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf
-                  gsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdfgsdfgsdfg
-                  sdfgsdfgsd fgsdfgLorem ipsum sdfgsdfg sdfgsdfgs dfgsdfgsd
-                  fgsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsd fgsdfgsdf
-                  gsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdfgsdfgsdfg sdfgsdfgsd
-                  fgsdfgLorem ipsum sdfgsdfg sdfgsdfgs dfgsdfgsd fgsdfgsd
-                  fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsd fgsdfgsdf gsdfgsdf
-                  gsdfgsdf gsdfgsdf gsdfgsdfgsdfgsdfg sdfgsdfgsd fgsdfgLorem
-                  ipsum sdfgsdfg sdfgsdfgs dfgsdfgsd fgsdfgsd fgsdfgsdf gsdfgsdf
-                  gsdfgsdf gsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdf
-                  gsdfgsdfgsdfgsdfg sdfgsdfgsd fgsdfgLorem ipsum sdfgsdfg
-                  sdfgsdfgs dfgsdfgsd fgsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf
-                  gsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdfgsdfgsdfg
-                  sdfgsdfgsd fgsdfgLorem ipsum sdfgsdfg sdfgsdfgs dfgsdfgsd
-                  fgsdfgsd fgsdfgsdf gsdfgsdf gsdfgsdf gsdfgsd fgsdfgsdf
-                  gsdfgsdf gsdfgsdf gsdfgsdf gsdfgsdfgsdfgsdfg sdfgsdfgsd fgsdfg
                 </p>
                 <table className="table table-zebra">
                   {/* head */}
