@@ -3,7 +3,7 @@ node_modules/
 
 # Environment variables
 .env
-    mysql.env
+mysql.env
 .env.local
 .env.*.local
 
@@ -35,3 +35,4 @@ Thumbs.db
 # Runtime data
 *.pid
 *.pid.lock
+mysql.env
