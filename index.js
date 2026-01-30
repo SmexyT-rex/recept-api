@@ -6,8 +6,11 @@ import ingredientRouter from "./routes/ingredientRoutes.js";
 import joinRoute from "./routes/joinRoute.js";
 
 const app = express();
+
 dotenv.config();
+
 const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 app.use(
   cors({
@@ -16,6 +19,7 @@ app.use(
     credentials: true,
   }),
 );
+
 app.use("/recipes", router);
 app.use("/ingredients", ingredientRouter);
 app.use("/all", joinRoute);
